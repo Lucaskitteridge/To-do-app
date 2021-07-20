@@ -1,7 +1,6 @@
 import React from "react"
-import Todo from "./todo"
 
-const TodoList = ({ inputText }) => {
+const Todo = ({ inputText }) => {
   return (
     <div className="todo-container">
       <ul className="todo-list">
@@ -11,4 +10,4 @@ const TodoList = ({ inputText }) => {
   )
 }
 
-export default TodoList;
+export default Todo;
