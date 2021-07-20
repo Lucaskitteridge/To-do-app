@@ -9,12 +9,12 @@ const Form = ({setInputText, setToDos, todos, inputText}) => {
   const submitTodoHandle = (e) => {
     e.preventDefault()
     setToDos([...todos, {text: inputText, compelted: false, id: Math.random()*1000}])
-    
+    setInputText("")
   }
 
   return (
     <form>
-      <input type="text" className="todo-input" onChange={inputTextHandle}/>
+      <input type="text" className="todo-input" value={inputText} onChange={inputTextHandle}/>
       <button className="todo-button" type="submit" onClick={submitTodoHandle}>
         <i className="fas fa-plus-square"></i>
       </button>
