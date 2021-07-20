@@ -1,5 +1,5 @@
-
 import './App.css';
+import Form from "./components/form"
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
       <header>
         Lucas's To Do List
       </header>
+      <Form />
     </div>
   );
 }
