@@ -10,8 +10,8 @@ function App() {
   const [filteredTodos, setFilteredTodos] = useState([])
 
   useEffect(() => {
-
-  },[todos])
+    filterHandle()
+  },[todos, status])
 
   const filterHandle = () => {
     switch (status) {
@@ -36,10 +36,13 @@ function App() {
         setToDos={setTodos}
         setInputText={setInputText}
         inputText={inputText}
-        setStatus={setStatus} />
+        setStatus={setStatus}
+        />
       <TodoList
         setTodos={setTodos}
-        todos={todos} />
+        todos={todos} 
+        filteredTodos={filteredTodos} 
+        />
     </div>
   );
 }
