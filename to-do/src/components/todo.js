@@ -18,8 +18,6 @@ const Todo = ({ text, todo, todos, setTodos }) => {
     )
   }
 
-  console.log(todo)
-
   return (
     <div className="todo">
       <li className={`todo-item ${todo.completed ? "completed " : ""}`}>{text}</li>
