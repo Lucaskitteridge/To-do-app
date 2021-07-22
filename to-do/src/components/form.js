@@ -1,6 +1,6 @@
 import React from "react"
 
-const Form = ({setInputText, setToDos, todos, inputText, setStatus}) => {
+const Form = ({ setInputText, setToDos, todos, inputText, setStatus }) => {
 
   const inputTextHandle = (e) => {
     setInputText(e.target.value)
@@ -8,7 +8,7 @@ const Form = ({setInputText, setToDos, todos, inputText, setStatus}) => {
 
   const submitTodoHandle = (e) => {
     e.preventDefault()
-    setToDos([...todos, {text: inputText, completed: false, id: Math.random()*1000}])
+    setToDos([...todos, { text: inputText, completed: false, id: Math.random() * 1000 }])
     setInputText("")
   }
 
@@ -18,7 +18,7 @@ const Form = ({setInputText, setToDos, todos, inputText, setStatus}) => {
 
   return (
     <form>
-      <input type="text" className="todo-input" value={inputText} onChange={inputTextHandle}/>
+      <input type="text" className="todo-input" value={inputText} onChange={inputTextHandle} />
       <button className="todo-button" type="submit" onClick={submitTodoHandle}>
         <i className="fas fa-plus-square"></i>
       </button>
