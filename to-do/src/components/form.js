@@ -4,17 +4,17 @@ const Form = ({ setInputText, setToDos, todos, inputText, setStatus }) => {
 
   const inputTextHandle = (e) => {
     setInputText(e.target.value)
-  }
+  };
 
   const submitTodoHandle = (e) => {
     e.preventDefault()
     setToDos([...todos, { text: inputText, completed: false, id: Math.random() * 1000 }])
     setInputText("")
-  }
+  };
 
   const statusHandle = (e) => {
     setStatus(e.target.value)
-  }
+  };
 
   return (
     <form>

@@ -30,7 +30,7 @@ function App() {
 
     filterHandle()
     saveLocal()
-  }, [todos, status])
+  }, [todos, status]);
 
 
   const saveLocal = () => {
@@ -66,6 +66,6 @@ function App() {
       />
     </div>
   );
-}
+};
 
 export default App;
