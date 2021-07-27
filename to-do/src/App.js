@@ -35,7 +35,7 @@ function App() {
 
   const saveLocal = () => {
     localStorage.setItem('todos', JSON.stringify(todos))
-  }
+  };
 
   const getLocal = () => {
     if (localStorage.getItem('todos') === null) {
@@ -44,7 +44,7 @@ function App() {
       let localTodo = JSON.parse(localStorage.getItem('todos'))
       setTodos(localTodo)
     }
-  }
+  };
 
 
   return (
